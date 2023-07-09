@@ -1,10 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-type InitialStateType = {
+export interface CounterState {
   count: number;
-};
+}
 
-const initialState: InitialStateType = {
+const initialState: CounterState = {
   count: 0,
 };
 

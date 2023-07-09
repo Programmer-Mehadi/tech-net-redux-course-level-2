@@ -5,6 +5,7 @@ const store = configureStore({
   reducer: {
     counter: counterSlice,
   },
+  devTools: true,
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -1,14 +1,13 @@
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "./redux/store";
 import {
   decrement,
   increment,
   incrementByAmount,
 } from "./redux/fearures/counter/counterSlice";
+import { useAppDispatch, useAppSelector } from "./redux/hook";
 
 function App() {
-  const count = useSelector((state: RootState) => state.counter.count);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counter.count);
+  const dispatch = useAppDispatch();
   return (
     <div className="mt-8">
       <div className="flex gap-4 items-center justify-center">
