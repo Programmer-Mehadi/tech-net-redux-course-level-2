@@ -1,6 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./redux/store";
-import { decrement, increment } from "./redux/fearures/counter/counterSlice";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "./redux/fearures/counter/counterSlice";
+
 function App() {
   const count = useSelector((state: RootState) => state.counter.count);
   const dispatch = useDispatch();
@@ -19,6 +24,12 @@ function App() {
           onClick={() => dispatch(increment())}
         >
           Increment
+        </button>
+        <button
+          className="w-fit border-2 border-gray-700 py-2 px-5 rounded-full cursor-pointer"
+          onClick={() => dispatch(incrementByAmount(5))}
+        >
+          Increment By Amount
         </button>
       </div>
     </div>
